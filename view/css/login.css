@@ -1,0 +1,108 @@
+body {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(var(--secondary_background_hover) 0%, var(--secondary_background) 20%, var(--secondary_background_hover) 80%);
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.idea_login_form {
+  position: fixed;
+  top: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 400px;
+  background: var(--tertiary_background);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 var(--primary_background);
+  animation: aparecer 1s;
+  transition-timing-function: step-start;
+}
+
+@keyframes aparecer {
+  0% {
+    top: 100%;
+    bottom: -100%;
+    left: 100%;
+    right: -100%;
+    transform: skew(20deg);
+  }
+
+  50% {
+    transform: skew(20deg);
+  }
+}
+
+.idea_login_img_logo {
+  width: 100%;
+  max-width: 90px;
+}
+
+.idea_login_span_title {
+  color: var(--tertiary_color);
+  font-size: 1.09em;
+  font-weight: bold;
+  letter-spacing: 0.10em;
+  margin: 5px 0 15px 0;
+}
+
+.idea_login_input_text,
+.idea_login_input_password,
+.idea_login_input_submit {
+  width: 100%;
+  max-width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  border-style: none;
+}
+
+.idea_login_input_text:hover,
+.idea_login_input_password:hover,
+.idea_login_input_submit:hover {
+  box-shadow: 0 0 10px 0 var(--primary_background);
+}
+
+.idea_login_input_text,
+.idea_login_input_password {
+  border: 2px solid var(--primary_background);
+  margin: 10px 0;
+  font-size: 0.8em;
+  color: var(--tertiary_color);
+}
+
+.idea_login_input_text::placeholder,
+.idea_login_input_password::placeholder {
+  color: var(--primary_background);
+}
+
+.idea_login_input_submit {
+  background: var(--primary_background);
+  color: var(--primary_color);
+  margin: 15px 0 0 0;
+}
+
+.idea_login_input_submit:hover {
+  background: var(--primary_background_hover);
+}
+
+.idea_login_span_msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  font-size: 1em;
+  color: var(--info);
+}

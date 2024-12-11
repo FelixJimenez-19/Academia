@@ -1,0 +1,48 @@
+/*
+:root {
+  --primary: #29AAE2;
+  --primary_hover: #218ab8;
+  --secondary: #222D32;
+  --secondary_hover: #1d262a;
+  --tertiary: #FFFFFF;
+  --tertiary_hover: #dddddd;
+  --success: #19A15F;
+  --info: #427ad5;
+  --warning: #FFCD42;
+  --error: #DD5145;
+}
+*/
+
+:root {
+  --primary_background: #3a3f41;
+  --primary_background_hover: #218ab8;
+  --primary_color: #ffffff;
+  --primary_color_hover: #ffffff;
+  --secondary_background: #222D32;
+  --secondary_background_hover: #1d262a;
+  --secondary_color: #FFFFFF;
+  --secondary_color_hover: #FFFFFF;
+  --tertiary_background: #FFFFFF;
+  --tertiary_background_hover: #e8e8e8;
+  --tertiary_color: #000000;
+  --tertiary_color_hover: #000000;
+  --success: #19A15F;
+  --info: #427ad5;
+  --warnning: #FFCD42;
+  --error: #DD5145;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  transition: all 0.3s ease;
+  font-family: sans-serif;
+  user-select: none;
+  outline: none;
+  border-style: none;
+}
+
+img {
+  pointer-events: none;
+}

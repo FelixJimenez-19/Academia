@@ -1,0 +1,120 @@
+header {
+  display: flex;
+  width: 100%;
+  /*  height: 50px;*/
+}
+
+header slider {
+  display: none;
+  height: 100vh !important;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  background: var(--primary_background);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.header-container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+  color: var(--primary_color);
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 100%;
+}
+
+.header-container nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  min-width: 100px;
+  height: 100%;
+  text-decoration: none;
+  color: var(--primary_color);
+  font-size: 15px;
+}
+
+.header-container nav a:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-container input[type="checkbox"],
+.header-container label {
+  display: none;
+}
+
+.header-container label {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0);
+}
+
+.header-container label:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.header-container label img {
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+
+
+
+@media (max-width: 800px) {
+  .header-container nav {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: var(--secondary_background);
+    opacity: 0;
+  }
+
+  .header-container nav a {
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+  }
+
+  .header-container label {
+    display: block;
+  }
+
+  .header-container input[type="checkbox"]:checked ~ nav {
+
+    height: 100%;
+    opacity: 1;
+  }
+
+  .header-container input[type="checkbox"]:checked ~ label {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    z-index: 1000000;
+  }
+}
